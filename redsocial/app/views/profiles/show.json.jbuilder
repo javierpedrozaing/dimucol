@@ -1,0 +1,1 @@
+json.extract! @profile, :id, :fotoPerfil, :fotoPortada, :descripcion, :fechaNacimiento, :facebook, :twitter, :google, :youtube, :instagram, :celular, :telefono, :lugarNacimiento, :created_at, :updated_at

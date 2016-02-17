@@ -1,0 +1,65 @@
+<%= form_for(@profile) do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fotoPerfil %><br>
+    <%= f.text_field :fotoPerfil %>
+  </div>
+  <div class="field">
+    <%= f.label :fotoPortada %><br>
+    <%= f.text_field :fotoPortada %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :fechaNacimiento %><br>
+    <%= f.date_select :fechaNacimiento %>
+  </div>
+  <div class="field">
+    <%= f.label :facebook %><br>
+    <%= f.text_field :facebook %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br>
+    <%= f.text_field :twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :google %><br>
+    <%= f.text_field :google %>
+  </div>
+  <div class="field">
+    <%= f.label :youtube %><br>
+    <%= f.text_field :youtube %>
+  </div>
+  <div class="field">
+    <%= f.label :instagram %><br>
+    <%= f.text_field :instagram %>
+  </div>
+  <div class="field">
+    <%= f.label :celular %><br>
+    <%= f.text_field :celular %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :lugarNacimiento %><br>
+    <%= f.text_field :lugarNacimiento %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

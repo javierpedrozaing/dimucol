@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Publications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Texto</th>
+      <th>Fecha</th>
+      <th>Tipopublicacion</th>
+      <th>Like</th>
+      <th>Imagen</th>
+      <th>Video</th>
+      <th>Ubicacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @publications.each do |publication| %>
+      <tr>
+        <td><%= publication.texto %></td>
+        <td><%= publication.fecha %></td>
+        <td><%= publication.tipoPublicacion %></td>
+        <td><%= publication.like %></td>
+        <td><%= publication.imagen %></td>
+        <td><%= publication.video %></td>
+        <td><%= publication.ubicacion %></td>
+        <td><%= link_to 'Show', publication %></td>
+        <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
+        <td><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Publication', new_publication_path %>

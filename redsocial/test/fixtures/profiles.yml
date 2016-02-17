@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fotoPerfil: MyString
+  fotoPortada: MyString
+  descripcion: MyText
+  fechaNacimiento: 2016-02-17
+  facebook: MyString
+  twitter: MyString
+  google: MyString
+  youtube: MyString
+  instagram: MyString
+  celular: MyString
+  telefono: MyString
+  lugarNacimiento: MyString
+
+two:
+  fotoPerfil: MyString
+  fotoPortada: MyString
+  descripcion: MyText
+  fechaNacimiento: 2016-02-17
+  facebook: MyString
+  twitter: MyString
+  google: MyString
+  youtube: MyString
+  instagram: MyString
+  celular: MyString
+  telefono: MyString
+  lugarNacimiento: MyString
