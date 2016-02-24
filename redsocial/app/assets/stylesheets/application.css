@@ -14,7 +14,10 @@
  *= require_self
  */
 body{
-	padding-top: 50px;
+	
+}
+
+h1, .h1, h2, .h2, h3, .h3{
 	margin: 0;
 }
 .anuncioLeft, .anuncioRigh, .columnChat {
@@ -23,3 +26,63 @@ body{
 	border: 1px solid;
 
 }
+
+.navbar{
+  background-color: #ddd;
+}
+.row{
+	margin:0px;
+}
+
+#form{
+	width: 300px;
+	margin: 0 10%;
+	position: relative;
+	display: block;
+	min-height: 470px;
+}
+
+#form input{
+	width: 350px;
+
+}
+
+#logoTitle{
+	    position: relative;
+    display: inline;
+    top: 7px;
+}
+footer{
+	height: 120px;
+	width: 100%;
+	display: block;
+	position: relative;
+	top: 30px;
+	background-color: #ddd;
+}
+#iniciarSesion, #registrarme, #recordarPassword,
+#notConfirmation, #notUnlock{
+	margin: 20px 0;
+	font-size: 16px;
+
+}
+#iniciarSesion .btn-success{
+	position: relative;
+	margin-right: 10;
+	width: 350px;
+}
+#iniciarSesion .btn-success a{
+	text-decoration: none;
+	color: #fff;
+}
+
+
+
+/* Dispositivos pequeños (tablets, anchura mayor o igual a 768px) */
+@media (min-width: @screen-sm-min) { ... }
+ 
+/* Dispositivos medianos (ordenadores, anchura mayor o igual a 992px) */
+@media (min-width: @screen-md-min) { ... }
+ 
+/* Dispositivos grandes (ordenadores, anchura mayor o igual a 1200px) */
+@media (min-width: @screen-lg-min) { ... }

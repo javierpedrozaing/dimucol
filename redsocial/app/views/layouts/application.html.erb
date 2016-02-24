@@ -5,19 +5,24 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
+	<a href="#contenido" class="sr-only">Saltar al contenido</a>
 
-	<div class="navbar navbar-default navbar-fixed-top">
+	<div class="navbar navbar-default container-fluid" id="contenido">
 		 	
-	  <div class="container">
+	  <div class="">
 	    
-	    <ul class="nav navbar-nav">
+	    <ul class="nav navbar-nav visible-lg">
 
-		 	<li class=""><a href="">FACEMUSIC.COM</a></li>
+		 	<li class=""><h1 id="logoTitle"><a href="">FACEMUSIC</a></h1>	</li>
 		 	<form class="navbar-form navbar-left" role="search">
-		        <div class="form-group">
-		          <input type="text" class="form-control" placeholder="Search">
+		        <div class="col-xs-5">
+		          <input type="text" class="form-control" placeholder="Que Buscas?">
+		        </div>
+		        <div class="col-xs-5">
+		          <input type="text" class="form-control" placeholder="Donde?">
 		        </div>
 		        <button type="submit" class="btn btn-default">Buscar</button>
       		</form>
@@ -26,7 +31,7 @@
       		<li><a href="">Servicios</a></li>
 		 </ul>
 
-		 <ul class="nav navbar-nav navbar-right">
+		 <ul class="nav navbar-nav navbar-right " >
 		 	<li><a href="" class="glyphicon glyphicon-envelope"></a></li>
 		 	<li><a href="" class="glyphicon glyphicon-user"></a></li>
 		 	<li><a href="" class=""></a></li>
@@ -48,9 +53,6 @@
 <div class="">
 <%= yield %>	
 </div>
-
-
-
 
 
 </body>

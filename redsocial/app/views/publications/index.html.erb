@@ -7,6 +7,8 @@
 <%= render :template => "publications/_anuncioLeft" %>
 </div>
 
+ 
+
 <div class="col-xs-6 col-sm-6" style="border:1px solid;">
   <h1>Listing Publications</h1>
 <table>
@@ -44,12 +46,16 @@
 <%= link_to 'New Publication', new_publication_path %>
 </div>
  
-<div class="col-xs-6 col-sm-2">
+  <div class="clearfix visible-xs"></div>
+
+<div class="col-xs-6 col-sm-2" >
 <%= render :template => "publications/_anuncioRight" %>
 </div>
-
-
+  <!-- La clase 'clearfix' sólo se aplica cuando el dispositivo sea
+       muy pequeño, tal y como indica la clase 'visible-xs' -->
+  <div class="clearfix visible-xs"></div>
 <div class="col-xs-6 col-sm-2">
 <%= render :template => "publications/_columnChat" %>
 </div>
 </div>
+<div class="clearfix visible-xs"></div>
