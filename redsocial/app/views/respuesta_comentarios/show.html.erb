@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Texto:</strong>
+  <%= @respuesta_comentario.texto %>
+</p>
+
+<p>
+  <strong>Like:</strong>
+  <%= @respuesta_comentario.like %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @respuesta_comentario.fecha %>
+</p>
+
+<%= link_to 'Edit', edit_respuesta_comentario_path(@respuesta_comentario) %> |
+<%= link_to 'Back', respuesta_comentarios_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipoanuncio:</strong>
+  <%= @anuncio.tipoAnuncio %>
+</p>
+
+<p>
+  <strong>Ubicacion:</strong>
+  <%= @anuncio.ubicacion %>
+</p>
+
+<p>
+  <strong>Fechainicial datetime:</strong>
+  <%= @anuncio.fechaInicial_datetime %>
+</p>
+
+<p>
+  <strong>Fechafinal:</strong>
+  <%= @anuncio.fechaFinal %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @anuncio.valor %>
+</p>
+
+<p>
+  <strong>Caracteristica:</strong>
+  <%= @anuncio.caracteristica %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @anuncio.reference %>
+</p>
+
+<%= link_to 'Edit', edit_anuncio_path(@anuncio) %> |
+<%= link_to 'Back', anuncios_path %>

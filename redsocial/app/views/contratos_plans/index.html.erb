@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Contratos Plans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Valortotal</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contratos_plans.each do |contratos_plan| %>
+      <tr>
+        <td><%= contratos_plan.valorTotal %></td>
+        <td><%= link_to 'Show', contratos_plan %></td>
+        <td><%= link_to 'Edit', edit_contratos_plan_path(contratos_plan) %></td>
+        <td><%= link_to 'Destroy', contratos_plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contratos plan', new_contratos_plan_path %>

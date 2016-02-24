@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipoAnuncio: MyString
+  ubicacion: MyString
+  fechaInicial_datetime: MyString
+  fechaFinal: 2016-02-19 17:40:46
+  valor: 1
+  caracteristica: MyText
+  reference: 
+
+two:
+  tipoAnuncio: MyString
+  ubicacion: MyString
+  fechaInicial_datetime: MyString
+  fechaFinal: 2016-02-19 17:40:46
+  valor: 1
+  caracteristica: MyText
+  reference: 

@@ -15,3 +15,4 @@
 /log/*
 !/log/.keep
 /tmp
+/railsinstaller-3.2.0.exe

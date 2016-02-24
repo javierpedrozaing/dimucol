@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipoNotificacion: MyString
+  fecha: 2016-02-19
+  texto: MyText
+
+two:
+  tipoNotificacion: MyString
+  fecha: 2016-02-19
+  texto: MyText

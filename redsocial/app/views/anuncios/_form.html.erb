@@ -1,0 +1,45 @@
+<%= form_for(@anuncio) do |f| %>
+  <% if @anuncio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@anuncio.errors.count, "error") %> prohibited this anuncio from being saved:</h2>
+
+      <ul>
+      <% @anuncio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipoAnuncio %><br>
+    <%= f.text_field :tipoAnuncio %>
+  </div>
+  <div class="field">
+    <%= f.label :ubicacion %><br>
+    <%= f.text_field :ubicacion %>
+  </div>
+  <div class="field">
+    <%= f.label :fechaInicial_datetime %><br>
+    <%= f.text_field :fechaInicial_datetime %>
+  </div>
+  <div class="field">
+    <%= f.label :fechaFinal %><br>
+    <%= f.datetime_select :fechaFinal %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br>
+    <%= f.number_field :valor %>
+  </div>
+  <div class="field">
+    <%= f.label :caracteristica %><br>
+    <%= f.text_area :caracteristica %>
+  </div>
+  <div class="field">
+    <%= f.label :reference %><br>
+    <%= f.text_field :reference %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

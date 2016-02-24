@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  texto: MyText
+  like: 1
+  fecha: 2016-02-23 17:10:49
+
+two:
+  texto: MyText
+  like: 1
+  fecha: 2016-02-23 17:10:49

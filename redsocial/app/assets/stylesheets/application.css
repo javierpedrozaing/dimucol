@@ -15,4 +15,11 @@
  */
 body{
 	padding-top: 50px;
+	margin: 0;
+}
+.anuncioLeft, .anuncioRigh, .columnChat {
+	display: block;
+	position: relative;
+	border: 1px solid;
+
 }
