@@ -5,6 +5,7 @@ class PublicationsController < ApplicationController
   # GET /publications.json
   def index
     @publications = Publication.all
+
   end
 
   # GET /publications/1

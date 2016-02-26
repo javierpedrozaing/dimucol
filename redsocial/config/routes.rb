@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  resources :publicities
+  resources :roles
   resources :contratos_plans
   resources :sections
   resources :plans
-  resources :contratos
   resources :respuesta_comentarios
   resources :comments
   resources :anuncios
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'publications#index'
+  root 'publicities#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

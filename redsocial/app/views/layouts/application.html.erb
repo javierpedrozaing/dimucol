@@ -11,8 +11,7 @@
 	<a href="#contenido" class="sr-only">Saltar al contenido</a>
 
 	<div class="navbar navbar-default container-fluid" id="contenido">
-		 	
-	  <div class="">
+	
 	    
 	    <ul class="nav navbar-nav visible-lg">
 
@@ -26,29 +25,51 @@
 		        </div>
 		        <button type="submit" class="btn btn-default">Buscar</button>
       		</form>
-      		<li><a href="">Eventos</a></li>
-      		<li><a href="">Publicidad</a></li>
+      		<li><%= link_to('Inicio', root_path) %></li>
+      		
+      		<li><%= link_to('Red Social', publications_path) %></li>
       		<li><a href="">Servicios</a></li>
+      		<li><%= link_to('Registrarme', new_user_registration_path) %></li>
+      		
 		 </ul>
 
 		 <ul class="nav navbar-nav navbar-right " >
-		 	<li><a href="" class="glyphicon glyphicon-envelope"></a></li>
-		 	<li><a href="" class="glyphicon glyphicon-user"></a></li>
-		 	<li><a href="" class=""></a></li>
-		 	<li><a href="#">Inicio</a></li>
+		 	<% if user_signed_in? %>
+		 	
+		 	<li><a href="" class="glyphicon glyphicon-comment" ></a></li>
+		 	<li><a href="" class="glyphicon glyphicon-bell" ></a></li>		 	
+		 	
        		<li class="dropdown">
          	 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
-	            <li><a href="#">Action</a></li>
-	            <li><a href="#">Another action</a></li>
-	            <li><a href="#">Something else here</a></li>
+
+	            <li><a href="#">Ver mi Perfil</a></li>
 	            <li role="separator" class="divider"></li>
-	            <li><a href="#" class="glyphicon glyphicon-cog">Configuración</a></li>
+	            <li><a href="#">Publicidad en Facemusk</a></li>
+	            <li><a href="#">Administrar Publicidad</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">Crear Anuncio</a></li>
+	            <li role="separator" class="divider"></li>
+	            
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#" class="glyphicon glyphicon-cog"> Configuración</a></li>
+	            
+				  <li>
+				  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+				  </li>
+				<% else %>
+				  <li>
+				  <%= link_to('Iniciar Sesion', new_user_session_path)  %>  
+				  </li>
+				<% end %>
 	          </ul>
 		 	</li>
+		 	
 		 </ul>
-	  </div>
+	
 	</div>
+	
+	
 
 <div class="">
 <%= yield %>	

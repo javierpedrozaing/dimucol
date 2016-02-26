@@ -11,4 +11,7 @@ class User < ActiveRecord::Base
   has_many :messages_users
   has_many :messages, :through => :messages_users
   has_many :anuncios
+
+  has_many :user_role
+  has_many :role, :through => :user_role
 end

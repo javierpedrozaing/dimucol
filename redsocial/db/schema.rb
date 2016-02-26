@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223225426) do
+ActiveRecord::Schema.define(version: 20160226153528) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "nombre"
@@ -90,7 +90,11 @@ ActiveRecord::Schema.define(version: 20160223225426) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "profile_id"
+    t.integer  "image_id"
+    t.string   "image_type"
   end
+
+  add_index "photos", ["image_type", "image_id"], name: "index_photos_on_image_type_and_image_id"
 
   create_table "plans", force: :cascade do |t|
     t.string   "nombre"
@@ -132,6 +136,20 @@ ActiveRecord::Schema.define(version: 20160223225426) do
 
   add_index "publications", ["user_id"], name: "index_publications_on_user_id"
 
+  create_table "publicities", force: :cascade do |t|
+    t.string   "logo"
+    t.string   "nombreComercial"
+    t.string   "email"
+    t.string   "direccion"
+    t.integer  "telefono"
+    t.integer  "celular"
+    t.string   "web"
+    t.string   "experiencia"
+    t.string   "repertorio"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "respuesta_comentarios", force: :cascade do |t|
     t.text     "texto"
     t.integer  "like"
@@ -139,6 +157,12 @@ ActiveRecord::Schema.define(version: 20160223225426) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "comment_id"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string   "nameRole"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "seccion_profiles", force: :cascade do |t|
@@ -161,6 +185,13 @@ ActiveRecord::Schema.define(version: 20160223225426) do
 
   add_index "tablealbums_photos", ["albums_id"], name: "index_tablealbums_photos_on_albums_id"
   add_index "tablealbums_photos", ["photos_id"], name: "index_tablealbums_photos_on_photos_id"
+
+  create_table "user_roles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "role_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

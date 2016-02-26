@@ -7,7 +7,7 @@
 <%= render :template => "publications/_anuncioLeft" %>
 </div>
 
- 
+<% if user_signed_in? %>
 
 <div class="col-xs-6 col-sm-6" style="border:1px solid;">
   <h1>Listing Publications</h1>
@@ -45,6 +45,12 @@
 <br/>
 <%= link_to 'New Publication', new_publication_path %>
 </div>
+<% elsif %>
+<div class="col-xs-6 col-sm-6" style="border:1px solid;">
+  <p>Debes registrarte en la red Social</p>
+  <%= link_to('Registrarme', new_user_registration_path) %>
+</div>
+<% end %>
  
   <div class="clearfix visible-xs"></div>
 
