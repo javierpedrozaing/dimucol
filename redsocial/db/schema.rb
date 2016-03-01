@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160226153528) do
+ActiveRecord::Schema.define(version: 20160301214701) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "nombre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "profile_id"
+  end
+
+  create_table "amigos", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "estado"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "anuncios", force: :cascade do |t|
@@ -59,6 +66,12 @@ ActiveRecord::Schema.define(version: 20160226153528) do
     t.integer  "contrato_id"
   end
 
+  create_table "departamentos", force: :cascade do |t|
+    t.string   "nombre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "messages", force: :cascade do |t|
     t.text     "text"
     t.datetime "fecha"
@@ -75,12 +88,24 @@ ActiveRecord::Schema.define(version: 20160226153528) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "municipios", force: :cascade do |t|
+    t.string   "nombre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "notifications", force: :cascade do |t|
     t.string   "tipoNotificacion"
     t.date     "fecha"
     t.text     "texto"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "pais", force: :cascade do |t|
+    t.string   "nombre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "photos", force: :cascade do |t|
@@ -100,8 +125,12 @@ ActiveRecord::Schema.define(version: 20160226153528) do
     t.string   "nombre"
     t.text     "descripcion"
     t.integer  "valor"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "profile_id"
+    t.string   "fechaInicial"
+    t.string   "fechaFinal"
+    t.string   "sort_coeficient"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -119,6 +148,7 @@ ActiveRecord::Schema.define(version: 20160226153528) do
     t.string   "lugarNacimiento"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "nombrePerfil"
   end
 
   create_table "publications", force: :cascade do |t|
@@ -186,6 +216,12 @@ ActiveRecord::Schema.define(version: 20160226153528) do
   add_index "tablealbums_photos", ["albums_id"], name: "index_tablealbums_photos_on_albums_id"
   add_index "tablealbums_photos", ["photos_id"], name: "index_tablealbums_photos_on_photos_id"
 
+  create_table "tags", force: :cascade do |t|
+    t.string   "nombre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "user_roles", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -208,7 +244,6 @@ ActiveRecord::Schema.define(version: 20160226153528) do
     t.datetime "updated_at",                          null: false
     t.string   "nombres"
     t.string   "apellidos"
-    t.string   "nombre_perfil"
     t.integer  "profile_id"
   end
 

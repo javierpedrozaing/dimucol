@@ -1,0 +1,78 @@
+<% 
+
+  keywords = ''
+  busqueda = ''
+
+  if !@seccTag.nil?
+    # Secion:
+    seccion = @seccTag[0]
+    # Palabra Clave:
+    tag = @seccTag[1]
+
+    if !seccion.nil?
+      # Viene seccion, agrega su nombre y descripcion
+      keywords = seccion.Nombre
+      busqueda = 'La sección: ' + seccion.Nombre + ', fue identificada en los parámetros de búsqueda.'
+    end
+
+    if !tag.nil?
+      # Viene tag, agrega su nombre y descripcion
+      if keywords.blank?
+        keywords = tag.nombre
+        busqueda = 'La palabra clave: ' + tag.nombre + ', fue identificada en los parámetros de búsqueda.'
+      else
+        keywords = keywords + ', ' + tag.nombre
+        busqueda = busqueda + ' La palabra clave: ' + tag.nombre + ', fue identificada en los parámetros de búsqueda'
+      end
+    end
+
+  end
+
+  if !@place.nil?
+    # Municipio:
+    municipio = @place[0]
+    # Departamento:
+    dpto = @place[1]
+
+    if !municipio.nil?
+      # Viene municipio, agrega su nombre y descripcion
+      if keywords.blank?
+        keywords = municipio.nombre
+        busqueda = 'El municipio: ' + municipio.nombre + ', fue identificado en los parámetros de búsqueda.'
+      else
+        keywords = keywords + ', ' + municipio.nombre
+        busqueda = busqueda + ' El municipio: ' + municipio.nombre + ', fue identificado en los parámetros de búsqueda'
+      end
+
+    end
+
+    if !dpto.nil?
+      # Viene departamento, agrega su nombre y descripcion
+      if keywords.blank?
+        keywords = dpto.nombre
+        busqueda = 'El departamento: ' + dpto.nombre + ', fue identificado en los parámetros de búsqueda.'
+      else
+        keywords = keywords + ', ' + dpto.nombre
+        busqueda = busqueda + ' El departamento: ' + dpto.nombre + ', fue identificado en los parámetros de búsqueda'
+      end
+    end
+
+  end
+
+  %>
+  
+<% @busquedas.each do |empresa| %>
+          <!-- Cambio en la forma de renderizar los resultados, para mejorar el rendimiento -->
+          <% suc = empresa.sucursales.first %>
+        
+          <% infoToShow = get_info_to_show(suc) %>
+          <% prodsDisp = get_productos_disponibles(empresa) %>
+
+          <%= render :template => "busquedas/_listPublicities", :locals => {:empresa => empresa, :cont => cont, :prodsDisp => prodsDisp, :infoToShow => infoToShow, :sucursal => suc, :muestraSucursales => true} %>
+
+          <%# ANTERIOR = render :template => "index/resultados", :locals => {:emp => empresa, :cont => cont} %>
+          <% cont+= 1 %>
+
+
+      <% end %>   
+<%= paginate @busquedas, :window => 3 %>
