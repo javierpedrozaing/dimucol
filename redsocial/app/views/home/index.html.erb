@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+<div class="col-xs-6 col-sm-2">
+<%= render :template => "publications/_anuncioLeft" %>
+</div>
+
+<% if user_signed_in? %>
+	<%= render :template => "publications/index" %>
+	<%= link_to 'New Publication', new_publication_path %>
+
+<% elsif %>
+<div class="col-xs-6 col-sm-6" style="border:1px solid;">
+	<h1>Bienvenidos</h1>
+
+<br/>
+  <p>Puedes buscar Usuarios registrados en el directorio</p>
+  <p>si quieres ser parte de la red social Debes registrarte </p>
+  <%= link_to('Registrarme', new_user_registration_path) %>
+</div>
+
+<% end %>
+  <div class="clearfix visible-xs"></div>
+
+	<div class="col-xs-6 col-sm-2" >
+	<%= render :template => "publications/_anuncioExtra" %>
+	</div>
+  <!-- La clase 'clearfix' sólo se aplica cuando el dispositivo sea
+       muy pequeño, tal y como indica la clase 'visible-xs' -->
+  <div class="clearfix visible-xs"></div>
+<div class="col-xs-6 col-sm-2">
+<%= render :template => "publications/_anuncioRight" %>
+</div>
+</div>
+<div class="clearfix visible-xs"></div>
+<%= render :template => "partials/_footer" %>
