@@ -1,3 +1,848 @@
 // Place all the styles related to the publicities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the Publications controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* ESTILOS NUEVO VER MAS */
+#descripcion{
+	max-height:411;
+	position:relative;
+	overflow:auto;
+	display:block;
+	height: 328px;
+}
+
+#descripcion p{
+	padding:20px;
+	text-align:justify;
+}
+
+#nombreComercial{
+	padding: 24px;
+}
+
+#sliderEmpresa{
+width:102%;
+position:relative;	
+}
+
+#sliderEmpresa .caption{
+     background-color: rgb(0, 0, 0);
+    /* height: 10px; */
+    color: rgb(255, 255, 255);
+    position: absolute;
+    /* top: 455px; */
+    
+    width:100%;
+    opacity: 0.8;
+    font-size: 20px;
+    padding-left: 41px;
+    bottom: 0;
+}
+#sliderProducto .caption{
+	background-color: rgb(0, 0, 0);
+    /* height: 10px; */
+    color: rgb(255, 255, 255);
+    position: absolute;    
+    padding: 7px;
+    width: 418px;
+    opacity: 0.8;
+    font-size: 20px;
+    padding-left: 41px;
+}
+
+#galeriaEmpresa{
+	
+}
+
+#galeriaEmpresa .rslides_tabs li{
+	width: 20px !important;
+    display: inline-block;
+    position: relative;
+    
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    text-align: center;
+    margin: 10px;
+    background: rgb(170, 170, 170);
+}
+#galeriaEmpresa .rslides_tabs li a{
+	color: #fff;
+    background: transparent;
+}
+
+#galeriaEmpresa .rslides_tabs li.rslides_here{
+	background: #000;
+    border-radius: 50%;
+}
+
+.rslides2_nav.prev{
+	position: absolute;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    top: 40%;
+    opacity: 0.7;
+    z-index: 3;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    height: 60px;
+    width: 35px;
+    background: rgba(0, 0, 0, 0) url("/assets/themes.gif") no-repeat left top;
+    margin-top: -39px;
+}
+
+.rslides2_nav.next{
+	    position: absolute;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    top: 40%;
+    right: 40px;
+    opacity: 0.7;
+    z-index: 3;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    height: 61px;
+    width: 35px;
+    background: rgba(0, 0, 0, 0) url("/assets/themes.gif") no-repeat right top;
+    margin-top: -39px;
+    right: 19%;
+}
+
+
+#videoEmpresa{
+	width: 100%;
+    border: 1px solid rgb(0, 0, 0);   
+    margin: 0 auto;
+
+}
+
+#videoEmpresa video{
+position: relative;
+    display: inline-block;    
+    width: 45%;
+    top: 23px;
+    left: 9%;
+    /*height: 350px;*/
+    border: 1px solid;
+    background-color: rgb(0, 0, 0);
+}
+#videoEmpresa #descVideo{
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    height: 40%;
+    float: right;
+    text-align: justify;
+    top: 35%;
+
+}
+
+#fondoEncabezado{
+	width: 100%;
+	position: relative;
+	
+	background: url(/assets/fondoContactos.png);
+}
+
+#fondoEncabezado p{
+	font-size: 40px;
+	font-family: Robot-Regular;
+	color: #fff;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#fondoEncabezado img{
+    position: relative;
+    left: 48%;
+    top: 15px;
+}
+
+#infoContactos{
+	width: 83%;
+	margin: 0 auto;	
+}
+
+#infoContactos #direccionEmpresa,
+#infoContactos #telefonosEmpresa,
+#infoContactos #webEmpresa
+{
+    width: 28%;
+    display: inline-block;
+    
+    padding: 20px;  
+}
+
+#infoContactos #direccionEmpresa p,
+#infoContactos #telefonosEmpresa p,
+#infoContactos #webEmpresa p
+{
+	text-align: center;
+}
+
+
+#telefonosEmpresa img, #direccionEmpresa img, #webEmpresa img{
+    position: relative;
+    left: 39%;
+}
+
+#redesSocialesEmpresa{
+	width: 83%;	
+	margin: 0 auto;
+	height:150px;
+
+}
+#redesSocialesEmpresa img{
+ position: relative;
+ display: inline-block;
+ margin: 2%;
+ cursor: pointer;
+}
+
+#formContactos{
+ width: 83%;
+    margin: 0 auto;
+    background-color: rgb(246, 246, 246);
+    border: 1px solid rgb(170, 170, 170);
+    height: auto;
+    position: relative;
+    display: block;
+    /* height: 50%; */
+    
+}
+
+#formContactos #datosContacto{
+width: 42%;
+    display: inline-block;
+    position: relative;
+    left: 18px;
+}
+
+#datosContacto input{
+	  width: 98%;
+    height: 20px;
+    margin: 3%;
+}
+#formContactos img{
+	   position: relative;
+    display: inline-block;
+    left: 12px;
+    
+}
+#formContactos img#enviaForm{
+	    position: relative;
+    display: inline-block;
+    left: 61px;
+    bottom: 50px;
+}
+
+#formContactos h4{
+	font-family: Roboto-Regular;
+    display: inline;    
+    position: relative;
+    left: 20px;
+}
+
+#formContactos #headForm{
+	display: inline-block;
+	width: 100%;
+}
+
+#formContactos h4::before{	
+
+}
+
+#formContactos #enviarForm{
+	height: 74px;
+    position: relative;
+    bottom: 25px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#formContactos #mensajeContacto{
+	    width: 38%;
+    display: inline-block;
+    vertical-align: top;
+    top: 7px;
+    position: relative;
+    left: 57px;
+}
+
+#formContactos #mensajeContacto textarea{
+	 width: 100%;
+    height: 133px;
+    position: relative;
+    display: block;
+    margin: 5%;
+    right: 10%;
+    vertical-align: top;
+    bottom: 19px;
+}
+
+#mapOptions {
+    display: block;
+    position: relative;
+    width: 83%;
+    margin: 21px auto;
+}
+#mapOptions #direcciones {
+    
+    display: inline-block;
+}
+#mapOptions .puntoPartida {
+    position: relative;
+    display: inline-block;
+}
+#reubicarDir, #reubicarCiudad {
+    background-color: rgb(229, 229, 229);
+    height: 25px;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
+#mapOptions .puntoDestino {
+        position: relative;
+    display: inline-block;
+    bottom: 26px;
+}
+#direcciones #reubicarBtn{
+      height: 35px;
+    background-color: rgb(255, 188, 7);
+    width: 78px;
+    bottom: 27px;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#myUbicationBtn {
+    
+    background-color: rgb(0, 165, 179);    
+    bottom: 8px;
+    position: relative;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    left: 15px;
+    cursor: pointer;
+}
+#mapOptions #comoLlego {
+    
+    display: inline-block;
+    position: relative;
+    bottom: 21px;
+}
+#comoLlego img {
+    position: relative;
+    top: 6px;
+    cursor: pointer;
+}
+
+#mapaEmpresa{
+	width: 83%;
+	margin: 0 auto;
+}
+
+#rutaMapa{
+	width: 83%;
+	margin: 20px auto;	
+
+}
+
+#rutaMapa p#label{
+	background-color: #e7e7e7;
+	font-family: Roboto-Bold;
+	color: #000;
+	height: 41px;
+}
+
+#rutaMapa p#label::before{
+	content: url(../images/imgExport/flechaRuta.png);
+	position: relative;
+	top: 10px;
+	margin-left: 24px;
+}
+
+#rutaMapa ul{
+	width: 90%;
+    margin: 0 auto;
+    
+}
+#rutaMapa ul li{
+    margin: 30px auto;
+}
+
+#rutaMapa span{
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    right: 12px;
+    position: relative;
+    padding: 4px;
+    height: 23px;
+    width: 20px;
+    text-align: center;
+    top: 5px;
+    
+}
+
+#streetView{
+	    width: 81%;
+    border: 10px solid rgb(212, 212, 212);
+    margin: 0 auto;
+    height: 350px;
+}
+
+#slideClientes{
+	height: 150px;
+	width: 100%;
+
+}
+#slideClientes #flexiselEmpresa{
+       height: 150px;
+    width: 80%;
+    position: relative;
+    display: block;
+    margin: 0 28%;
+}
+
+#slideClientes #flexiselEmpresa li{
+	display: inline-block;
+	float: left;
+	height: 100px;
+	border: 1px solid #000;
+	width: 300px;
+}
+
+#slideClientes .nbs-flexisel-inner{
+	width: 100%;
+	background-color: #ededed;
+	overflow: hidden;
+	height: 200px;
+}
+
+#slideClientes .nbs-flexisel-nav-left{
+	    position: relative;
+    top: 20px !important;
+    /* width: 22px; */
+    /* height: 22px; */
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    /* opacity: 0.5; */
+    background: url(../images/imgExport/previusClientes.png) !important;
+    width: 56px;
+    height: 49px;
+    left: 6%;
+}
+
+#slideClientes .nbs-flexisel-nav-right{
+	    position: relative;
+    top: 20px !important;
+    /* width: 22px; */
+    /* height: 22px; */
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    /* opacity: 0.5; */    
+    width: 56px;
+    height: 49px;
+    background: url(../images/imgExport/nextClientes.png) !important;
+    right: 6%;
+}
+
+#rutaMapa p{
+    text-align: justify;
+}
+
+
+#accordion h3{
+    display: none;
+
+}
+
+#videoEmpresa iframe, #videoEmpresa video{
+	width: 33%;
+    padding-top: 3%;
+    min-height: 80%;
+}
+
+.editProducto, .deleteProducto{
+    display: none;
+}
+
+/* MEDIA QUERIS*/
+
+@media only screen and (max-width: 325px){
+#mapaEmpresa{
+    width: 72%;
+    margin: 0 8%;
+    }
+}
+
+@media only screen and (max-width: 350px){
+  #opcionesVideo img{
+        margin-left: 15%;
+    }
+
+}
+
+@media only screen and (max-width: 400px){
+   
+    #opcionesVideo{
+        margin: 0;
+    }
+    #redesSocialesEmpresa img{
+        margin: 10%;
+    }
+    
+    #videoEmpresa video{
+        left: 0;
+        width: 55%;
+    }
+    #opcionesVideo{
+        top: 43px;
+    }
+    #infoContactos #direccionEmpresa, #infoContactos #telefonosEmpresa, #infoContactos #webEmpresa{
+        width: 90% !important;
+    }
+    #redesSocialesEmpresa img {
+    margin: 9% !important;
+    }
+    #redesSocialesEmpresa img {
+    margin: 0;
+    left: 0;
+    padding: 0;
+    }
+    #slideClientes #flexiselEmpresa{
+        width: auto;
+        
+    }
+#mapOptions #comoLlego{
+    text-align: center;
+}
+       
+    #myUbicationBtn{
+        width: 79% !important;
+        bottom: 0px !important;
+        left: 0 !important;
+    }
+
+    #formContactos #enviarForm {
+    right: 0 !important;
+    float: right;
+    bottom: 115px;    
+    }
+
+}
+
+
+@media only screen and (max-width: 480px){
+    #myUbicationBtn{
+        width: 23%;
+        bottom: 11px;
+    }
+    #formContactos img#enviaForm{
+        left: 36px;
+    }
+    #formContactos #enviarForm{
+        right: 31px;
+        bottom: 46px;
+        position: absolute;
+    }
+    #comoLlego #myUbicationBtn{
+        width: 70% !important;
+        top: 6px;
+        left: 0;
+          
+    }
+   
+}   
+
+/* Media quieri para */
+@media only screen and (max-width: 640px){
+  
+
+
+}
+
+
+
+@media only screen and (max-width: 720px){
+      #accordion h3{
+        display: block;
+        
+    }
+    #accordion h3{
+        border: 1px solid;        
+        height: 48px;
+    }
+
+    #accordion h3::before{
+    content: url(../images/descuento.png);    
+    position: relative;
+    left: 84%;
+    top: 10px;
+    }
+
+    .editProducto{
+       position: relative;
+    left: 76%;
+    display: inline-block;
+    /* left: 25px; */
+    }
+    .deleteProducto{
+         position: relative;
+    display: inline-block;
+    /* vertical-align: top; */
+    bottom: 5px;
+    left: 81%;      
+    }
+    #descService{
+        margin: 0% 8% 6%;
+    }
+    
+
+#quienesSomos #logo{
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    left: 0;
+}
+#quienesSomos #textoSomos{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    left: 0;
+}
+
+#bannerProductos #eslogan{
+    left: 12%;
+    width: 100%; 
+}
+
+ #slideClientes #flexiselEmpresa{
+        width: auto !important;
+        left: 0 !important;
+        margin: 0;
+        padding: 0;
+        
+    }
+    #slideClientes #flexiselEmpresa li{
+        width: 100%;
+    }
+
+#fondoEncabezado img{
+    left: 44%;
+}
+    
+    #formContactos #datosContacto {
+    width: 87%;
+    display: inline-block;
+    position: relative;
+    left: 18px;
+}
+#datosContacto input {
+    width: 100%;
+    height: 20px;
+    margin: 3%;
+}
+#formContactos #mensajeContacto {
+    width: 60% !important;
+    display: inline-block;
+    vertical-align: top;
+    top: 17px;
+    position: relative;
+    left: 11% !important;
+}
+#formContactos #mensajeContacto textarea {
+    width: 100%;
+    height: 106px;
+    position: relative;
+    display: block;
+    margin: 5%;
+    right: 11%;
+    vertical-align: top;
+    bottom: 19px;
+}
+
+
+#formContactos #mensajeContacto textarea{
+    height: 106px;
+}
+
+    #redesSocialesEmpresa img{
+        margin: 12%;
+    }
+     
+
+    #infoProductos{
+  display: inline-block;
+    position: relative;
+    width: 98%;
+    border: 1px solid rgb(0, 0, 0);
+    vertical-align: top;
+    
+    }
+    #galeriaProducto {
+        display: inline-block;
+    position: relative;
+    border: 1px solid rgb(0, 0, 0);
+    width: 98%;
+    vertical-align: top;
+    /* left: 5%; */
+    
+    }
+
+    .rslides3_nav.prev, .rslides5_nav.prev, .rslides7_nav.prev, .rslides9_nav.prev{
+        left: 0;
+    }
+    .rslides2_nav.next, .rslides4_nav.next, .rslides6_nav.next, .rslides8_nav.next{
+        right: 0;
+    }
+    #edicionProductos {
+            border: 1px solid rgb(255, 0, 0);
+    position: absolute;
+    display: none;
+    /* width: 25%; */
+    right: 2%;
+    bottom: 100px;
+    height: 303px;
+    z-index: 100;
+}
+
+#imagelightbox
+{
+    position: fixed;
+    z-index: 9999;
+ 
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.fancybox{
+	padding:10px !important;
+}
+
+#videoEmpresa video{
+    position: relative;
+    display: block;
+    /* left: 10%; */
+    width: 100%;
+    /* top: 23px; */
+    height: 350px;
+    border: 1px solid;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    left: 0;
+}
+#videoEmpresa #descVideo{
+   position: relative;
+    display: block;
+    text-align: justify;
+    width: 100%;
+    height: 106px;    
+
+}
+
+#map-large{
+    
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+#infoContactos #direccionEmpresa, #infoContactos #telefonosEmpresa, #infoContactos #webEmpresa {
+    width: 90%;
+    display: inline-block;
+    border: 1px solid rgb(165, 42, 42);
+    padding: 5%;
+}
+    #opcionesVideo p, #opcionesVideo span {
+    margin-right: 3% !important;
+    }
+
+    #mapOptions{
+        width: 86%;
+    }
+    #mapOptions #direcciones{
+        width: 100%;
+    }
+    #mapOptions .puntoPartida{
+        display: block;
+    }
+    #reubicarDir, #reubicarCiudad{
+        width: 90%;
+    }
+    #mapOptions .puntoDestino{
+            width: 73%;
+    }
+    #mapOptions #comoLlego{
+        width: 97%;
+    margin: 0 auto;
+    display: block;
+        
+    }    
+    #direcciones #reubicarBtn{
+        width: 64px;
+    }
+
+#comoLlego #myUbicationBtn{
+        width: 130px;
+        bottom: 17px;   
+    }
+
+    #videoEmpresa iframe, #videoEmpresa video{
+width: 100%;
+}
+}
+
+
+@media only screen and (max-width: 1010px){
+    #formContactos #mensajeContacto{
+        width: auto;
+    }
+   #opcionesVideo p, #opcionesVideo span {
+    margin-right: 20%;
+    }
+
+#slideClientes #flexiselEmpresa{
+    width: 150%;
+}
+
+    #infoContactos #direccionEmpresa, #infoContactos #telefonosEmpresa, #infoContactos #webEmpresa{
+    width: 30%;
+    margin: 0% 0 2%;
+    padding: 1%;
+}
+#redesSocialesEmpresa{
+    width: 84%;
+
+}
+#redesSocialesEmpresa img{
+    margin: 0%;
+}
+#formContactos #mensajeContacto{
+
+}
+#sliderProducto1 .caption, #sliderProducto3 .caption, #sliderProducto5 .caption, #sliderProducto7 .caption{
+    
+}
+    #comoLlego img {
+        top: auto;
+    }
+
+
+}
+
+@media only screen and (max-width: 1280px){
+    #sliderProducto1 .caption, #sliderProducto3 .caption, #sliderProducto5 .caption, #sliderProducto7 .caption{
+    
+}
+}
+
+
+

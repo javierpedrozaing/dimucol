@@ -2,11 +2,27 @@
 <html>
 <head>
   <title>Redsocial</title>
+	
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
+
+<script>
+
+	$(".fancybox").fancybox();
+
+
+  $(function() {
+    $(".rslides").responsiveSlides({
+    	nav: true, 
+
+    });
+  });
+</script>
 <body>
 	<a href="#contenido" class="sr-only">Saltar al contenido</a>
 
@@ -30,7 +46,7 @@
 
       		<li><%= link_to('Inicio', root_path) %></li>
       		
-      		<li><%= link_to('Red Social', publications_path) %></li>
+      		<li><%= link_to('Directorio', publicities_path) %></li>
       		<li><a href="">Servicios</a></li>
       		<li><%= link_to('Registrarme', new_user_registration_path) %></li>
       		
@@ -73,7 +89,6 @@
 	</div>
 	
 	
-
 <div class="">
 <%= yield %>	
 </div>

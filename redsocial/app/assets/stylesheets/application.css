@@ -12,9 +12,11 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap
+ 
  */
 body{
-	
+	margin: 10px;
 }
 
 h1, .h1, h2, .h2, h3, .h3{
@@ -47,7 +49,7 @@ h1, .h1, h2, .h2, h3, .h3{
 }
 
 #logoTitle{
-	    position: relative;
+	 position: relative;
     display: inline;
     top: 7px;
 }
