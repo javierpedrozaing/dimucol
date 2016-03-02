@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SeccionProfileTest < ActiveSupport::TestCase
+class UbicationAnuncioTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

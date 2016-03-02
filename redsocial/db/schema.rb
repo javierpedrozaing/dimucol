@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160301214701) do
+ActiveRecord::Schema.define(version: 20160302160805) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "nombre"
@@ -117,6 +117,8 @@ ActiveRecord::Schema.define(version: 20160301214701) do
     t.integer  "profile_id"
     t.integer  "image_id"
     t.string   "image_type"
+    t.integer  "publicity_id"
+    t.integer  "album_id"
   end
 
   add_index "photos", ["image_type", "image_id"], name: "index_photos_on_image_type_and_image_id"
@@ -127,10 +129,11 @@ ActiveRecord::Schema.define(version: 20160301214701) do
     t.integer  "valor"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.integer  "profile_id"
     t.string   "fechaInicial"
     t.string   "fechaFinal"
     t.string   "sort_coeficient"
+    t.integer  "publicity_id"
+    t.integer  "user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -165,6 +168,17 @@ ActiveRecord::Schema.define(version: 20160301214701) do
   end
 
   add_index "publications", ["user_id"], name: "index_publications_on_user_id"
+
+  create_table "publicites_contratos", force: :cascade do |t|
+    t.string   "nombrePublicidad"
+    t.integer  "valor"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "publicity_id"
+    t.integer  "user_id"
+    t.datetime "fechaInicial"
+    t.datetime "fechaFinal"
+  end
 
   create_table "publicities", force: :cascade do |t|
     t.string   "logo"
@@ -208,6 +222,13 @@ ActiveRecord::Schema.define(version: 20160301214701) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "sections_publicities", force: :cascade do |t|
+    t.integer  "section_id"
+    t.integer  "publicity_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "tablealbums_photos", id: false, force: :cascade do |t|
     t.integer "albums_id"
     t.integer "photos_id"
@@ -218,6 +239,13 @@ ActiveRecord::Schema.define(version: 20160301214701) do
 
   create_table "tags", force: :cascade do |t|
     t.string   "nombre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ubication_anuncios", force: :cascade do |t|
+    t.string   "nombre"
+    t.integer  "anuncio_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -255,9 +283,9 @@ ActiveRecord::Schema.define(version: 20160301214701) do
     t.string   "url"
     t.integer  "like"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "profile_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "publicity_id"
   end
 
 end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PlanTest < ActiveSupport::TestCase
+class SectionsPublicityTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

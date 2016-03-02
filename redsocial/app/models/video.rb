@@ -1,3 +1,3 @@
 class Video < ActiveRecord::Base
-	belongs_to :profile, foreign_key: 'profile_id'
+	belongs_to :publicity, foreign_key: 'publicity_id'
 end

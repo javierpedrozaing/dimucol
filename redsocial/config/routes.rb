@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   resources :roles
   resources :contratos_plans
   resources :sections
-  resources :plans
   resources :respuesta_comentarios
   resources :comments
   resources :anuncios

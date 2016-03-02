@@ -1,4 +1,4 @@
 class Section < ActiveRecord::Base
-	has_many :seccion_profile
-	has_many :profiles, :through => :seccion_profile
+	has_many :sections_publicity
+	has_many :publicities :through => :sections_publicity
 end
