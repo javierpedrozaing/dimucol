@@ -6,15 +6,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 
 <script>
 
-	$(".fancybox").fancybox();
-
+  $(".fancybox").fancybox();
 
   $(function() {
     $(".rslides").responsiveSlides({
@@ -48,7 +46,13 @@
       		
       		<li><%= link_to('Directorio', publicities_path) %></li>
       		<li><a href="">Servicios</a></li>
+      		<% if user_signed_in? 
+      			usuario = current_user.email.split("@") %>
+      		<li><a href="/profiles/<%= current_user.id %>"><%= usuario[0] %></a></li>
+      		
+      		<% else %>
       		<li><%= link_to('Registrarme', new_user_registration_path) %></li>
+      		<% end %>
       		
 		 </ul>
 
@@ -62,7 +66,7 @@
          	 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 
-	            <li><a href="#">Ver mi Perfil</a></li>
+	            <li><a href="/profiles/<%= current_user.id %>">Ver mi Perfil</a></li>
 	            <li role="separator" class="divider"></li>
 	            <li><a href="#">Publicidad en Facemusk</a></li>
 	            <li><a href="#">Administrar Publicidad</a></li>

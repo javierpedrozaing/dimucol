@@ -22,6 +22,7 @@
 
 #nombreComercial{
 	padding: 24px;
+    text-align:center;
 }
 
 #sliderEmpresa{
@@ -143,15 +144,14 @@ position: relative;
 #fondoEncabezado{
 	width: 100%;
 	position: relative;
-	
+    height: 50px;
 	background: url(/assets/fondoContactos.png);
 }
 
 #fondoEncabezado p{
 	font-size: 40px;
 	font-family: Robot-Regular;
-	color: #fff;
-	padding-top: 20px;
+	color: #fff;	
 	text-align: center;
 }
 
@@ -159,6 +159,16 @@ position: relative;
     position: relative;
     left: 48%;
     top: 15px;
+}
+#contentRepertorio{
+    width:96%;
+    position:relative;
+    display:block;
+    margin:10px auto;
+}
+
+#contentRepertorio iframe{
+margin:6px;
 }
 
 #infoContactos{
@@ -170,7 +180,7 @@ position: relative;
 #infoContactos #telefonosEmpresa,
 #infoContactos #webEmpresa
 {
-    width: 28%;
+    width: 30%;
     display: inline-block;
     
     padding: 20px;  
@@ -198,7 +208,7 @@ position: relative;
 #redesSocialesEmpresa img{
  position: relative;
  display: inline-block;
- margin: 2%;
+ margin: 3%;
  cursor: pointer;
 }
 
@@ -466,7 +476,7 @@ width: 42%;
 
 #videoEmpresa iframe, #videoEmpresa video{
 	width: 33%;
-    padding-top: 3%;
+    padding:10px;
     min-height: 80%;
 }
 
@@ -474,7 +484,34 @@ width: 42%;
     display: none;
 }
 
-/* MEDIA QUERIS*/
+#galeriaFotografica{
+    width: 95%;
+    position: relative;
+    display: block;
+    margin:10px auto;
+
+}
+#galeriaFotografica a img{
+margin-top:10px;
+}
+
+#descripcion{
+    border-top:3px solid rgb(221, 221, 221);
+    border-left:3px solid rgb(221, 221, 221);
+    border-bottom:3px solid rgb(221, 221, 221);
+}
+#descripcion::-webkit-scrollbar{
+    width: 3px;
+    background-color: rgb(221, 221, 221);
+}
+
+#descripcion h4{
+    position:relative;
+    text-align:center;
+}
+
+
+/************************************ MEDIA QUERIS *************************************/
 
 @media only screen and (max-width: 325px){
 #mapaEmpresa{
@@ -506,6 +543,8 @@ width: 42%;
     #opcionesVideo{
         top: 43px;
     }
+
+
     #infoContactos #direccionEmpresa, #infoContactos #telefonosEmpresa, #infoContactos #webEmpresa{
         width: 90% !important;
     }

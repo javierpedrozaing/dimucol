@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'home/index'
 
   resources :publicities
+  
   resources :roles
   resources :contratos_plans
   resources :sections
